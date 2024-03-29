@@ -1,0 +1,101 @@
+.copyright {
+    background-color:rgb(0, 255, 0);
+    display: inline-block;
+    border:solid;
+    border-width: 1px;
+    margin-left: 10px;
+    margin-top: calc(100vh - 40px); 
+    padding-left: 5px;
+    padding-right: 5px;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .copyright-fixed {
+    background-color:rgb(0, 255, 0) !important;
+    border:solid !important;
+    border-width: 1px !important;
+    margin-left: 10px !important; 
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-top: 95% !important;
+  }
+
+  .bariscavusoglu {
+    background-color: rgb(255, 255, 255);
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 8px;
+    margin-top: 8px;
+    display: inline-block;
+    position: absolute; 
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    border:double;
+    border-radius: 0px;
+    font-family: 'Times New Roman', serif;
+  }
+  .bariscavusoglu:hover{
+    background-color: rgb(255, 0, 255);
+  }
+  
+  .page1 {
+    margin-top: 170px;
+    margin-left: 8px;
+    border:none;
+    background-color: rgb(255, 255, 255);
+    display:block;
+  }
+  .page1:hover{
+    background-color: rgb(255, 0, 255);
+    color: rgb(0, 0, 0);
+  }
+  .pages {
+    margin-top: 10px;
+    margin-left: 8px;
+    border:none;
+    background-color: rgb(255, 255, 255);
+    display:block;
+  }
+  .pages:hover{
+    background-color: rgb(255, 0, 255);
+    color: rgb(0, 0, 0);
+  }
+  
+  #seq_fixed {
+    height: 100%;
+    position: fixed;
+    background: rgb(255, 255, 255);
+    width: 15%;
+    box-sizing: border-box;
+    display: inline-block;  
+    vertical-align: top;
+  }
+
+  #seq_scrollable {
+    padding-left: calc(15% + 20px);
+    text-align: justify;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 9px;
+    padding-bottom: 50px;
+    padding-right: 20px;
+    display: inline-block;  
+    vertical-align: top;
+  }
+
+  .vid {
+    margin-left: -280px;
+    margin-top: 0px;
+  }
+
+  
+  @media screen and (max-height: 800px) {
+    .copyright {
+        margin-top: 800px; 
+        position: absolute;
+    }
+  }
