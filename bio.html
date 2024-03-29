@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <style>
+
+    body{
+      /*background-image: url('media/jkjkjkjk.png');*/
+      background-color: rgb(255, 255, 255);
+    }
+    .bariscavusoglu {
+      background-color: rgb(255, 255, 255);
+      padding-left: 9px;
+      padding-right: 9px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: inline-block;
+      position: absolute; 
+      font-size: 18px;
+      color: rgb(0, 0, 0);
+      border:double;
+      border-radius: 0px;
+      font-family: 'Times New Roman', serif;
+    }
+    .bariscavusoglu:hover{
+      background-color: rgb(0, 255, 0);
+    }
+    .copyright {
+      background-color:rgb(0, 255, 0);
+      display: inline-block;
+      border:solid;
+      border-width: 1px;
+      margin-left: 10px;
+      margin-top: 900px;
+      margin-bottom: 100px;
+      position: absolute; 
+      padding-left: 5px;
+      padding-right: 73px;
+    }
+    .date {
+      display: inline-block;
+      border:none;
+      border-width: 1px;
+      margin-left: 147px;
+      margin-top: 902px;
+      margin-bottom: 100px;
+      position: absolute; 
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    
+    .contact {
+      display: inline-block;
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 100px;
+      font-size: 16px;
+      text-decoration: underline;
+      background-color:rgb(0, 255, 0);
+    }
+
+
+    .bio {
+      display: inline-block;
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 130px;
+      font-size: 16px;
+    }
+
+    .instagram {
+      display: inline-block;
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 150px;
+      font-size: 16px;
+      text-decoration: underline;
+      color:black;
+    }
+    .instagram:hover {
+      background-color:rgb(0, 255, 0);
+    }
+    
+    .img1 {
+      display: inline-block;
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 500px;
+      /*box-shadow: 0px 10px 21px rgb(0, 0, 0);*/
+      width:420px;
+      border:none;
+    }
+
+  </style>
+
+  <head></head>
+  <body>
+
+    <a href="mainPage.html">
+      <button class="bariscavusoglu" id="baris-cavusoglu">Barış Çavuşoğlu</button>
+    </a>
+    <div class="contact">BIO:</div>
+    <div class="copyright" id="copyright">⚔️ © bariscavusoglu</div>
+    <div class="date" id="date"></div>
+
+    <div class="bio">
+      Barış Çavuşoğlu b. 1994, is an animator and visual artist.<br>
+      They studied 3D VFX at Escape Studios London and went on to<br> 
+      study Computer Science with Games Technology BSc at City, <br>
+      University of London. In 2018 they moved to Berlin and became<br> 
+      a part of Random Collective Berlin, an organization focusing <br>
+      on animation and design. They are now living and working in <br>
+      Los Angeles where they are developing a singular and loud <br>
+      animation style of their own fusing grotesque cartooning, <br>
+      and surreal black comedy in the form of XR, video art and <br>
+      installations. They are currently an Experimental Animation <br>
+      MFA candidate at California Institute of the Arts. <br>
+      Between exhibitions and personal projects, they also worked <br>
+      as a freelance animation director for Adult Swim. Their <br>
+      animations have been screened internationally at the <br>
+      likes of Annecy International Animation Film Festival, <br>
+      REDCAT Theatre, OVNi Festival France, Lithuanian International <br>
+      Shorts and Dutch Design Week. In November 2021 they opened a <br>
+      dual presentation at BSMNT Leipzig, Germany with Kid Xanthrax <br>
+      called #SLIPGNOSIS
+    </div>
+    <img class="img1" src="media/tray_for_maya.png">
+
+  </body>
+
+  <script>
+    function updateDateTime() {
+            // create a new `Date` object
+            const today = new Date();
+
+            var dd = today.getDate();
+            var mm = today.getMonth()+1; 
+            var yyyy = today.getFullYear();
+            if(dd<10) {
+              dd='0'+dd;
+            } 
+            if(mm<10) {
+              mm='0'+mm;
+            } 
+            // get the current date and time as a string
+            var now = dd+''+mm+''+yyyy;
+            const currentDateTime = now.toLocaleString();
+
+            // update the `textContent` property of the `span` element with the `id` of `datetime`
+            document.querySelector('#date').textContent = currentDateTime;
+          }
+          setInterval(updateDateTime, 1000);
+  </script>
+</html>
