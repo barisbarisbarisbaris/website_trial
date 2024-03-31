@@ -2,13 +2,24 @@
 <html>
   <script src="js\leader-line.min.js"></script>
   <script src="js\anim-event.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <style>
+    .bariscavusoglu{
+      background-color: rgb(255, 255, 255) !important;
+      color: rgb(0, 0, 0) !important;
+      border-color: rgb(0, 0, 255) !important;
+      z-index: -1 !important;
+    }
+  </style>
   
   <head> 
     <link rel="stylesheet" href="css\main.css">
     <link rel="stylesheet" href="css\common.css">
+    <meta http-equiv="Pragma" content="no-cache">
   </head>
 
-  <body onload="myMove()">
+  <body>
 
   <script defer  src="js\main.js"></script>
   <script defer src="js\common.js"></script>
@@ -25,7 +36,7 @@
     <a href="index2.html">
       <button class="e02" id="e-02">
         <span class="e02_none">e02</span>
-        <span class="e02_hover">Last<br>Minutes<br>₍₂₀₂₁₎</span>
+        <span class="e02_hover">Last<br>Minutes</span>
       </button>
     </a>
     
@@ -36,7 +47,7 @@
       </button>
     </a>
 
-    <a href="index2.html">
+    <a href="page-slipgnosis.html">
       <button class="e04" id="e-04">
         <span class="e04_none">e04</span>
         <span class="e04_hover">#<br>𝕾<br>𝔏<br>𝕴<br>𝔓<br>𝕲<br>𝔑<br>𝕺<br>𝔖<br>𝕴<br>𝔖</span>
@@ -52,7 +63,7 @@
       </button>
     </a>
 
-    <a href="index2.html">
+    <a href="page-howigotapplauded.html">
       <button class="p02" id="p-02">
         <span class="p02_none">p02</span>
         <span class="p02_hover">How I Got<br>Applauded<br>₍₂₀₂₀₎</span>
@@ -89,9 +100,16 @@
       </button>
     </a>
 
-    <button class="press" id="press">press</button>
+    <a href="press.html">
+      <button class="press" id="press">
+        <span class="press_none">press</span>
+        <span class="press_hover">press</span>
+      </button>
+    </a>
+
     <button class="images" id="images">i</button>
     <button class="insp" id="insp">insp</button>
+
     <button class="color" id="color">color</button>
 
     <div class="copyright" id="copyright"></div>

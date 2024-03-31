@@ -1,14 +1,31 @@
+//font loop
+
+//var fonts = ['times', 'verdana', 'arial'];
+//var currentFont = 0
+//function changeFont() {
+//document.body.style.fontFamily = fonts[currentFont++ % fonts.length]
+//}
+//setInterval(changeFont, 100);
+
+//button color change
+
+$("#color").on("click", function() {
+  $("#bio").animate().css({
+    backgroundColor: '#'+Math.floor(Math.random()*16777215).toString(16)
+  }, 2500);
+});
 
 
-// var fonts = ['times', 'verdana', 'arial'];
-// var currentFont = 0
+//reload on load for leader line problem on Safari browser
+(function () {
+	window.onpageshow = function(event) {
+		if (event.persisted) {
+			window.location.reload();
+		}
+	};
+})();
 
-// function changeFont() {
-//   document.body.style.fontFamily = fonts[currentFont++ % fonts.length]
-// }
-
-// setInterval(changeFont, 1000);
-
+//elements
 var element_baris = document.getElementById('baris-cavusoglu'),
 element_e01 = document.getElementById('e-01'),   
 element_e02 = document.getElementById('e-02'),   
@@ -72,7 +89,7 @@ middleLabel: LeaderLine.captionLabel('line 2', {fontSize: 14}),
 color: 'black'
 });
 
-var line3 = new LeaderLine(LeaderLine.pointAnchor(element_baris, {x: 50, y:33}), element_p01, {
+var line3 = new LeaderLine(LeaderLine.pointAnchor(element_baris, {x: 50, y:35}), element_p01, {
 size:2,
 startPlug: 'square',
 endPlug: 'hand',
@@ -138,7 +155,7 @@ color: 'black'
 line8.setOptions({startSocket: 'right', endSocket: 'bottom'});
 line8.path = 'grid';
 
-var line9 = new LeaderLine(LeaderLine.pointAnchor(element_baris, {x: 30, y:33}), element_e01, {
+var line9 = new LeaderLine(LeaderLine.pointAnchor(element_baris, {x: 30, y:35}), element_e01, {
 dash:true,
 size:2,
 startPlug: 'square',
@@ -160,7 +177,7 @@ middleLabel: LeaderLine.captionLabel('line 10', {fontSize: 14}),
 color: 'black'
 });
 
-var line11 = new LeaderLine(LeaderLine.pointAnchor(element_baris, {x: 85, y:33}), element_images, {
+var line11 = new LeaderLine(LeaderLine.pointAnchor(element_baris, {x: 70, y:35}), element_images, {
 dash:true,
 size:2,
 startPlug: 'square',
@@ -227,7 +244,7 @@ color: 'black'
 line16.setOptions({startSocket: 'left', endSocket: 'top'});
 line16.path = 'grid';
 
-var line17 = new LeaderLine(LeaderLine.pointAnchor(element_baris, {x: 10, y:33}), element_e03, {
+var line17 = new LeaderLine(LeaderLine.pointAnchor(element_baris, {x: 10, y:35}), element_e03, {
 dash: {animation: true},
 size:2,
 startPlug: 'square',
@@ -422,7 +439,7 @@ listen_e4.addEventListener('mouseout', AnimEvent.add(function() {
 line20.position();
 }), false);
 
-/* E 04 */
+/* CONTACT */
 var listen_contact = document.getElementById('contact');
 
 listen_contact.addEventListener('mouseover', AnimEvent.add(function() {
@@ -430,4 +447,14 @@ line12.position();
 }), false);
 listen_contact.addEventListener('mouseout', AnimEvent.add(function() {
 line12.position();
+}), false);
+
+/* PRESS */
+var listen_contact = document.getElementById('press');
+
+listen_contact.addEventListener('mouseover', AnimEvent.add(function() {
+line16.position();
+}), false);
+listen_contact.addEventListener('mouseout', AnimEvent.add(function() {
+line16.position();
 }), false);
